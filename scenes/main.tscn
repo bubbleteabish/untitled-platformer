@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3 uid="uid://bx5g1cuvgfaye"]
+
+[ext_resource type="Script" uid="uid://cyxovdekldbx6" path="res://scripts/main.gd" id="1_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://bxafid2buyotd" path="res://scenes/background.tscn" id="1_sugp2"]
+[ext_resource type="PackedScene" uid="uid://cdsgtpl32xs7p" path="res://scenes/ground.tscn" id="2_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://tmibbfiluws1" path="res://scenes/dino.tscn" id="3_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://do2jcjomshpwn" path="res://scenes/hud.tscn" id="5_tbgi4"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_jyhfs")
+
+[node name="Background" parent="." instance=ExtResource("1_sugp2")]
+
+[node name="Ground" parent="." instance=ExtResource("2_jyhfs")]
+
+[node name="Dino" parent="." instance=ExtResource("3_tbgi4")]
+position = Vector2(79, 492)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 324)
+
+[node name="HUD" parent="." instance=ExtResource("5_tbgi4")]
