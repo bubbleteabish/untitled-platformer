@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://3dmfctuq6ipx"]
 
-[ext_resource type="Script" uid="uid://dvky6duxmipcy" path="res://scenes/bird.gd" id="1_3po83"]
+[ext_resource type="Script" uid="uid://dvky6duxmipcy" path="res://scripts/bird.gd" id="1_3po83"]
 [ext_resource type="Texture2D" uid="uid://dyasm1fruq87r" path="res://assets/img/obstacles/Bird.png" id="1_kqhkv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3po83"]

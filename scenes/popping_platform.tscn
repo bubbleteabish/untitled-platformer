@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=4 uid="uid://cqg4yqg5dh8kh"]
+
+[ext_resource type="Script" uid="uid://cx8dicp8rf5or" path="res://scenes/popping_platform.gd" id="1_7paqu"]
+[ext_resource type="TileSet" uid="uid://bn6i13hkhsmub" path="res://tres/platform.tres" id="1_yrg7h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7paqu"]
+size = Vector2(126, 8.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_igi20"]
+size = Vector2(126, 14)
+
+[node name="PoppingPlatform" type="Area2D"]
+script = ExtResource("1_7paqu")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAAAAAAAAAMAAgAAAABAAAAAAANAAgAAAACAAAAAAANAAgAAAADAAAAAAANAAgAAAAEAAAAAAANAAgAAAAFAAAAAAANAAgAAAAGAAAAAAANAAgAAAAHAAAAAAAOAAgAAAA=")
+tile_set = ExtResource("1_yrg7h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(64, 4.375)
+shape = SubResource("RectangleShape2D_7paqu")
+debug_color = Color(0.820317, 0.36670348, 0.44914234, 0.41960785)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(64, 8)
+shape = SubResource("RectangleShape2D_igi20")
