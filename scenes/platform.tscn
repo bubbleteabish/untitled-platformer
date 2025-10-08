@@ -1,16 +1,23 @@
-[gd_scene load_steps=3 format=4 uid="uid://cg208qlljlfnu"]
+[gd_scene load_steps=4 format=4 uid="uid://cg208qlljlfnu"]
 
 [ext_resource type="TileSet" uid="uid://bn6i13hkhsmub" path="res://tres/platform.tres" id="1_ba0x2"]
+[ext_resource type="Texture2D" uid="uid://ciemkykocb2ji" path="res://assets/img/Traps/Platforms/Brown Off.png" id="2_nlgqw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n1ckp"]
-size = Vector2(127, 15)
+size = Vector2(31.75, 3.75)
 
 [node name="Platform" type="StaticBody2D"]
+scale = Vector2(3.5, 3.5)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
+visible = false
 tile_map_data = PackedByteArray("AAAAAAAAAAAMAAAAAAABAAAAAAANAAAAAAACAAAAAAANAAAAAAADAAAAAAANAAAAAAAEAAAAAAANAAAAAAAFAAAAAAANAAAAAAAGAAAAAAANAAAAAAAHAAAAAAAOAAAAAAA=")
 tile_set = ExtResource("1_ba0x2")
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_nlgqw")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(63.5, 7.5)
+position = Vector2(0.12500109, 0.41071475)
+scale = Vector2(0.9999998, 0.9999998)
 shape = SubResource("RectangleShape2D_n1ckp")

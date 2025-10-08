@@ -67,15 +67,18 @@ func generate_platforms():
 		var platform
 		var random_platform = platform_types[randi_range(0,difficulty)]
 		platform = random_platform.instantiate()
-		var platform_rect = platform.get_node("TileMapLayer").get_used_rect()
-		var platform_length = platform.get_node("TileMapLayer").map_to_local(platform_rect.size).x
+		var platform_length = platform.get_node("Sprite2D").texture.get_width()
+		var platform_scale = platform.get_node("Sprite2D").scale
+		platform_length = platform_length * platform_scale.x
+		#var platform_length = platform.get_node("TileMapLayer").map_to_local(platform_rect.size).x
 	#	var platform_height = platform.get_node("TileMapLayer").texture.get_height()
 		var platform_x : int
-		if last_platform.global_position.x < (screen_size.x / 2) - platform_length:
-			platform_x = randi_range(screen_size.x / 2, screen_size.x - platform_length)
+		if last_platform.global_position.x < (screen_size.x / 2):
+			platform_x = clamp(randi_range(screen_size.x / 2, screen_size.x ),0, screen_size.x - platform_length)
 		else:
-			var offset : int = (screen_size.x / 2) - platform_length
-			platform_x = randi() % offset
+			var offset : int = (screen_size.x / 2)
+			platform_x = clamp(randi() % offset, 0, screen_size.x - platform_length)
+		print(str(platform_x))
 		var platform_y : int = last_platform.global_position.y - randi_range(175,275)
 		last_platform = platform
 		add_platform(platform, platform_x, platform_y)
