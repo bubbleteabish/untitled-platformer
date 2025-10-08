@@ -20,6 +20,11 @@ config/icon="res://icon.svg"
 window/stretch/mode="viewport"
 window/main_scene="uid://bx5g1cuvgfaye"
 
+[editor]
+
+version_control/plugin_name="GitPlugin"
+version_control/autoload_on_startup=true
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
