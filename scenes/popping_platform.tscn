@@ -1,7 +1,6 @@
-[gd_scene load_steps=6 format=4 uid="uid://cqg4yqg5dh8kh"]
+[gd_scene load_steps=5 format=3 uid="uid://cqg4yqg5dh8kh"]
 
-[ext_resource type="Script" uid="uid://cx8dicp8rf5or" path="res://scenes/popping_platform.gd" id="1_7paqu"]
-[ext_resource type="TileSet" uid="uid://bn6i13hkhsmub" path="res://tres/platform.tres" id="1_yrg7h"]
+[ext_resource type="Script" uid="uid://cx8dicp8rf5or" path="res://scripts/popping_platform.gd" id="1_7paqu"]
 [ext_resource type="Texture2D" uid="uid://xq52fwitmmqp" path="res://assets/img/Traps/Falling Platforms/Off.png" id="3_igi20"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_igi20"]
@@ -14,16 +13,13 @@ size = Vector2(31.571426, 4.5714283)
 scale = Vector2(3.5, 3.5)
 script = ExtResource("1_7paqu")
 
-[node name="TileMapLayer" type="TileMapLayer" parent="."]
-visible = false
-tile_map_data = PackedByteArray("AAAAAAAAAAAMAAgAAAABAAAAAAANAAgAAAACAAAAAAANAAgAAAADAAAAAAANAAgAAAAEAAAAAAANAAgAAAAFAAAAAAANAAgAAAAGAAAAAAANAAgAAAAHAAAAAAAOAAgAAAA=")
-tile_set = ExtResource("1_yrg7h")
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.99999994, 0.99999994)
 texture = ExtResource("3_igi20")
+centered = false
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(15.999999, 5.7142854)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(1.0217938e-07, -1.3571421)
@@ -31,7 +27,7 @@ scale = Vector2(0.9999999, 0.9999999)
 shape = SubResource("RectangleShape2D_igi20")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.0714242, -3.1428573)
+position = Vector2(16, 2.0000002)
 scale = Vector2(0.9999999, 0.9999999)
 shape = SubResource("RectangleShape2D_7paqu")
 debug_color = Color(0.820317, 0.36670348, 0.44914234, 0.41960785)

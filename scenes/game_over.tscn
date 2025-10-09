@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cv5wsa4ebxugh"]
 
-[ext_resource type="Script" uid="uid://dgpvi6jx6kpuw" path="res://scenes/game_over.gd" id="1_wqhvx"]
+[ext_resource type="Script" uid="uid://dgpvi6jx6kpuw" path="res://scripts/game_over.gd" id="1_wqhvx"]
 [ext_resource type="Texture2D" uid="uid://ciudhob5nuyq3" path="res://assets/img/Menu/Buttons/Restart.png" id="2_tbwuq"]
 
 [node name="GameOver" type="CanvasLayer"]

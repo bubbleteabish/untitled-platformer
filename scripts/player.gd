@@ -1,12 +1,16 @@
 extends CharacterBody2D
 
 
-const SPEED = 300.0
+const SPEED = 350.0
 const JUMP_VELOCITY = -800.0
+const TRAMP_VELOCITY = -1400.0
 
 var start_jumping := false
 var rotation_speed := 260
+var object_hit
 
+func _ready() -> void:
+	$Area2D.body_entered.connect(hit_object)
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -19,7 +23,10 @@ func _physics_process(delta: float) -> void:
 		start_jumping = true
 	
 	if start_jumping and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+		if object_hit == "TrampCol":
+			velocity.y = TRAMP_VELOCITY
+		else:
+			velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -34,3 +41,6 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+
+func hit_object(body):
+	object_hit = body.name
