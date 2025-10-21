@@ -13,4 +13,4 @@ func bounced_on(body):
 		bounce_count += 1
 		modulate = Color.RED
 	if bounce_count > MAX_BOUNCE:
-		get_parent().remove_platform(self)
+		get_parent().remove_element(self, "platform")

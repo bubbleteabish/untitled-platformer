@@ -81,7 +81,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_87ver"]
-size = Vector2(23, 6)
+size = Vector2(23, 3.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xhhhx"]
 size = Vector2(23, 4)
@@ -106,8 +106,9 @@ centered = false
 position = Vector2(12.428572, 4)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TrampCol"]
-position = Vector2(2.9802322e-08, 0)
+position = Vector2(0, -1.25)
 shape = SubResource("RectangleShape2D_87ver")
+one_way_collision = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(12.5, 2)

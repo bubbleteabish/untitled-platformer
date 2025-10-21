@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://xq52fwitmmqp" path="res://assets/img/Traps/Falling Platforms/Off.png" id="3_igi20"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_igi20"]
-size = Vector2(31.428574, 6.714285)
+size = Vector2(30.85715, 4.1428566)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7paqu"]
 size = Vector2(31.571426, 4.5714283)
@@ -22,8 +22,8 @@ centered = false
 position = Vector2(15.999999, 5.7142854)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(1.0217938e-07, -1.3571421)
-scale = Vector2(0.9999999, 0.9999999)
+position = Vector2(0, -2.6428554)
+scale = Vector2(0.99999964, 0.99999964)
 shape = SubResource("RectangleShape2D_igi20")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

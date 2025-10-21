@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://dvxx873hqbe05"]
+
+[ext_resource type="Texture2D" uid="uid://0wpqcv0r0oj1" path="res://assets/img/Traps/Platforms/Grey Off.png" id="1_75yu5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o5ex3"]
+size = Vector2(30, 5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hrfkx"]
+size = Vector2(30, 5)
+
+[node name="FoamPlatform" type="Area2D"]
+scale = Vector2(3, 3)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_75yu5")
+centered = false
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(16, 4.5)
+shape = SubResource("RectangleShape2D_o5ex3")
+one_way_collision = true
+debug_color = Color(0.9351648, 0, 0.18344295, 0.41960785)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(16, 5.5)
+shape = SubResource("RectangleShape2D_hrfkx")

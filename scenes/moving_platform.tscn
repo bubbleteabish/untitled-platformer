@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cg208qlljlfnu"]
+
+[ext_resource type="Script" uid="uid://3bkx5b6wjk07" path="res://scripts/moving_platform.gd" id="1_1tdcd"]
+[ext_resource type="Texture2D" uid="uid://ciemkykocb2ji" path="res://assets/img/Traps/Platforms/Brown Off.png" id="2_mb26n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rxa2w"]
+size = Vector2(30.142876, 5.071432)
+
+[node name="MovingPlatform" type="AnimatableBody2D"]
+scale = Vector2(3.5, 3.5)
+script = ExtResource("1_1tdcd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_mb26n")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(15.785712, 4.3214273)
+scale = Vector2(0.99999934, 0.99999934)
+shape = SubResource("RectangleShape2D_rxa2w")
+one_way_collision = true
+one_way_collision_margin = 4.3
+debug_color = Color(0.99629647, 0, 0.19810504, 0.41960785)
