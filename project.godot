@@ -11,18 +11,20 @@ config_version=5
 [application]
 
 config/name="Untitled Platformer"
-run/main_scene="uid://bx5g1cuvgfaye"
+run/main_scene="uid://dbjv5mtstm66l"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
 
 [display]
 
+window/size/viewport_width=590
+window/size/viewport_height=960
 window/stretch/mode="viewport"
 window/main_scene="uid://bx5g1cuvgfaye"
 
 [editor]
 
-version_control/plugin_name="GitPlugin"
+movie_writer/movie_file="C:/GameDev/Recordings/untitled_platformer.avi"
 version_control/autoload_on_startup=true
 
 [rendering]

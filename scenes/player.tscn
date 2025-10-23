@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://c6vo1h08djfiq"]
+
+[ext_resource type="Texture2D" uid="uid://brn1yu5tpod1s" path="res://assets/img/balls/tennis-ball.png" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://knyuy7oe8djx" path="res://scripts/player.gd" id="1_g2els"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g2els"]
+radius = 416.66666
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qhqgy"]
+radius = 433.65372
+
+[node name="Player" type="CharacterBody2D"]
+scale = Vector2(0.06, 0.06)
+script = ExtResource("1_g2els")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_3vyb7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_g2els")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_qhqgy")
+debug_color = Color(0.9434277, 0.19743088, 0.3521789, 0.41960785)
